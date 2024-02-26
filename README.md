@@ -22,7 +22,19 @@ This is a first update solution Dev C3 M3
 
 Users should be able to:
 
-- RWD by flex setting
+- 使用者可以在首頁看到所有餐廳與它們的簡單資料：
+- 餐廳照片
+- 餐廳名稱
+- 餐廳分類
+- 餐廳評分
+- 使用者可以再點進去看餐廳的詳細資訊：
+- 類別
+- 地址
+- 電話
+- 描述
+- 圖片
+- 使用者可以透過搜尋餐廳名稱來找到特定的餐廳
+- 使用者可以透過搜尋餐廳類別來找到特定的餐廳
 
 ### Screenshot
 
@@ -30,8 +42,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Chious/Dev-C4-M1-Final](https://github.com/Chious/Dev-C4-M1-Final)
-- Live Site URL: [https://chious.github.io/Dev-C4-M1-Final/](https://chious.github.io/Dev-C4-M1-Final/)
+- Solution URL: [https://github.com/Chious/AC-c3-m3-restaurant-list](https://github.com/Chious/AC-c3-m3-restaurant-list)
 
 ## My process
 
@@ -43,9 +54,26 @@ Users should be able to:
 
 ### 處理步驟
 
-### What I learned
+1. Router: 引入資料、處理篩選器邏輯
 
-### 待迭代
+```js
+const data = require("data-path");
+```
+
+```js
+//篩選器
+//Step1: if keyword exist
+//Step2: if name include keyword or category include keyword => retrun true
+
+const filterData = keyword ? data.filter(...) : data;
+
+```
+
+2. View: 刪除重複的部分
+
+類似 `Array.prototype.forEach`，在 handlebar 可以使用 {{#each datas as |data|}} {{/each}} 來實現迴圈
+
+### What I learned
 
 ### Useful resources
 
